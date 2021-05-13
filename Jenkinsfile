@@ -8,4 +8,7 @@ pipeline {
     }
 
   }
+  environment {
+    server1 = 'web'
+  }
 }
