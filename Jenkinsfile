@@ -1,14 +1,16 @@
 pipeline {
-  agent any
-  stages {
-    stage('build') {
-      steps {
-        sh 'echo "today\'s date is: $(date) "'
-      }
+  agent {
+    node {
+      label 'first'
     }
 
   }
-  environment {
-    server1 = 'web'
+  stages {
+    stage('build') {
+      steps {
+        echo 'welcome'
+      }
+    }
+
   }
 }
