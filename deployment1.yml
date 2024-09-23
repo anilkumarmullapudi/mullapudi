@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nginx
+spec:
+  selector:
+    matchLabels:
+      app: flask2
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: flask2
+    spec:
+      containers:
+      - name: flaskapp
+        image: appuanil02/mullapudi:version02
